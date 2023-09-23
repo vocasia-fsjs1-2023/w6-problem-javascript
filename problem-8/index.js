@@ -1,6 +1,12 @@
 function cariMedian(arr) {
-    // code disini
+  if (arr.length % 2 === 0) {
+    const middle = (arr.length / 2) - 1;
+    return (arr[middle] + arr[middle + 1]) / 2;
+  } else {
+    const middle = (arr.length / 2) - 0.5;
+    return arr[middle];
   }
+}
   
   // TEST CASES
   console.log(cariMedian([1, 2, 3, 4, 5])); // 3
