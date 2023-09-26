@@ -1,6 +1,20 @@
 function deepSum (arr) {
-    // Code disini
+  let hasilJumlah = 0;
+
+  if (arr.length === 0){
+    return 'No Number';
   }
+
+  for (let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++){
+      for (let k = 0; k < arr[i][j].length; k++){
+        hasilJumlah += arr[i][j][k];
+      }
+    }
+  }
+
+  return hasilJumlah;
+}
   
   //TEST CASE
   console.log(deepSum([

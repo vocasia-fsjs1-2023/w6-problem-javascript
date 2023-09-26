@@ -1,5 +1,15 @@
 function highestScore (students) {
-    // Code disini
+  const highScore = {};
+
+  for (const person of students) {
+    const { name, score, class: className } = person;
+
+    if (!highScore[className] || score > highScore[className].score) {
+      highScore[className] = { name, score };
+    }
+  }
+
+  return highScore;
   }
   
   // TEST CASE
