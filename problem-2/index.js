@@ -1,8 +1,16 @@
 function ladder(word) {
-//your code here
+  let arr = [];
+  for (let i = word.length; i > 0; i--) {
+    let tampung = [];
+    for (let j = 0; j < i; j++) {
+      tampung.push(word[j]);
+    }
+    arr.push(tampung);
+  }
+  return arr;
 }
-  
-console.log(ladder('vocasia'));
+
+console.log(ladder("vocasia"));
 //   [
 //     [ 'v', 'o', 'c', 'a', 's', 'i', 'a' ],
 //     [ 'v', 'o', 'c', 'a', 's', 'i' ],
