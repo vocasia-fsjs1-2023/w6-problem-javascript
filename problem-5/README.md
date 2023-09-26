@@ -15,7 +15,7 @@ Implementasikan function graduates untuk mendapatkan daftar student yang lulus d
 - Student dapat dinyatakan lulus apabila score lebih besar dari 75.
 - Masukkan name dan score dari student ke class yang dia ikuti.
 - Student yang tidak lulus tidak perlu ditampilkan.
-
+  
 Output yang diharapkan berupa Object Literal dengan format sebagai berikut:
 ```
 {
