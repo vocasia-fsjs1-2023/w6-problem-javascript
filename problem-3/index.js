@@ -1,6 +1,7 @@
 let num = 3
 
 // Tulis code dibawah sini.
+<<<<<<< HEAD
 for (let i = 1; i <= num; i++) {
     let row = '';
     for (let j = 1; j <= num - i; j++) {
@@ -16,3 +17,6 @@ for (let i = 1; i <= num; i++) {
 // dan console log hasil
 console.log(row);
 }
+=======
+// dan console log hasil
+>>>>>>> 16f95399334a8eb943b7c5ef3ed42e61ae195207

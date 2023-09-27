@@ -1,5 +1,6 @@
 function ladder(word) {
 //your code here
+<<<<<<< HEAD
 let result = [];
   let wordArray = word.split('');
   let currentRow = [];
@@ -11,6 +12,8 @@ let result = [];
 
   return result;
 
+=======
+>>>>>>> 16f95399334a8eb943b7c5ef3ed42e61ae195207
 }
   
 console.log(ladder('vocasia'));

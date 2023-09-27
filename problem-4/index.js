@@ -1,5 +1,6 @@
 function changeMe(arr) {
     // Tulis codemu disini dan console log hasilnya
+<<<<<<< HEAD
     var currentYear = new Date().getFullYear(); // Mendapatkan tahun sekarang
 
     for (var i = 0; i < arr.length; i++) {
@@ -22,6 +23,8 @@ function changeMe(arr) {
       console.log('""');
     }
 
+=======
+>>>>>>> 16f95399334a8eb943b7c5ef3ed42e61ae195207
 }
   
   // TEST CASES
