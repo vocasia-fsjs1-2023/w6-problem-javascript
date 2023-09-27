@@ -1,6 +1,17 @@
 function highestScore (students) {
     // Code disini
+  let result = {};
+  for (let i = 0; i < students.length; i++) {
+    let student = students[i];
+    if (!result[student.class]) {
+      result[student.class] = {
+        name: student.name,
+        score: student.score
+      };
+    } 
   }
+  return result;
+}
   
   // TEST CASE
   console.log(highestScore([
