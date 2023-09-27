@@ -1,5 +1,14 @@
 function highestScore (students) {
-    // Code disini
+    let highestScores = {};
+    for (const student of students) {
+      if (!highestScores[student.class] || student.score > highestScores[student.class].score) {
+        highestScores[student.class] = {
+          name: student.name,
+          score: student.score
+        };
+      }
+    }
+    return highestScores;
   }
   
   // TEST CASE

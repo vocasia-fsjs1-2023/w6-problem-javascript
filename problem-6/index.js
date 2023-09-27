@@ -1,5 +1,16 @@
 function deepSum (arr) {
-    // Code disini
+    if (arr.length === 0) {
+      return 'no number';
+    }
+    let jumlah = 0;
+    for (const subArr of arr) {
+      for (const subSubArr of subArr) {
+        for (const num of subSubArr) {
+          jumlah = jumlah + num;
+        }
+      }
+    }
+    return jumlah;
   }
   
   //TEST CASE
