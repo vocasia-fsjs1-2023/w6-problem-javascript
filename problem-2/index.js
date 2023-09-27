@@ -1,5 +1,14 @@
 function ladder(word) {
-//your code here
+    const Septi = [];
+    const kereta = word.split('');
+    for(let i = kereta.length; i > 0; i--){
+        const mobil = [];
+        for (let j = 0; j < i; j++){
+            mobil.push(kereta[j]);
+        }
+        Septi.push(mobil);
+    }
+    return Septi;
 }
   
 console.log(ladder('vocasia'));
