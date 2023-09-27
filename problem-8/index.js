@@ -1,5 +1,13 @@
 function cariMedian(arr) {
-    // code disini
+  const sortedArr = arr.sort((a, b) => a - b);
+  const middleIndex = Math.floor(sortedArr.length / 2);
+
+  if (sortedArr.length % 2 === 0) {
+    const middleValues = [sortedArr[middleIndex - 1], sortedArr[middleIndex]];
+    return (middleValues[0] + middleValues[1]) / 2;
+  } else {
+    return sortedArr[middleIndex];
+  }
   }
   
   // TEST CASES
