@@ -1,7 +1,21 @@
 function graduates (students) {
     // Code disini
+  let hasil = {};
+  for (let i = 0; i < students.length; i++) {
+    let murit = students[i];
+    if (!hasil[murit.class]) {  //pengecekan didalam hasil belum ada murit class maka murit class kosong
+      hasil[murit.class] = [];
+    }
+    if (murit.score > 75) {
+      hasil[murit.class].push({
+        name: murit.name,
+        score: murit.score
+      });
+    }
   }
-  
+  return hasil;
+}
+
   console.log(graduates([
     {
       name: 'Dimitri',
@@ -78,3 +92,4 @@ function graduates (students) {
   
   
   console.log(graduates([])); //{}
+

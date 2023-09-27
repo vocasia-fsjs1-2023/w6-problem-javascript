@@ -1,6 +1,17 @@
 function deepSum (arr) {
     // Code disini
+  let tambah = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let luarArr = arr[i];
+    for (let j = 0; j < luarArr.length; j++) {
+      let dalamArr = luarArr[j];
+      for (let k = 0; k < dalamArr.length; k++) {
+          tambah += dalamArr[k];
+      }
+    }
   }
+  return tambah;
+}
   
   //TEST CASE
   console.log(deepSum([
