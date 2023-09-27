@@ -1,5 +1,25 @@
 function deepSum (arr) {
     // Code disini
+    let sum = 0;
+  
+    for (let i = 0; i < arr.length; i++) {
+      let level1 = arr[i]; 
+      
+      for (let j = 0; j < level1.length; j++) {
+        let level2 = level1[j]; 
+  
+        for (let k = 0; k < level2.length; k++) {
+          let number = level2[k]; 
+          sum += number; 
+        }
+      }
+    }
+  
+    if (sum === 0) {
+      return 'No number';
+    }
+  
+    return sum;
   }
   
   //TEST CASE
