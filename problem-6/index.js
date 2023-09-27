@@ -1,5 +1,23 @@
 function deepSum (arr) {
-    // Code disini
+  if (arr.length === 0) {
+    return 'No number';
+  }
+
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    const level1 = arr[i];
+    
+    for (let j = 0; j < level1.length; j++) {
+      const level2 = level1[j];
+      
+      for (let k = 0; k < level2.length; k++) {
+        sum += level2[k];
+      }
+    }
+  }
+
+  return sum;
   }
   
   //TEST CASE
