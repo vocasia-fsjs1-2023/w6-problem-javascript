@@ -1,45 +1,67 @@
-function deepSum (arr) {
-    // Code disini
+function deepSum(arr) {
+  // Mengecek apakah arr adalah array kosong
+  if (arr.length === 0) {
+    return 'No number';
   }
-  
-  //TEST CASE
-  console.log(deepSum([
-    [
-      [4, 5, 6],
-      [9, 1, 2, 10],
-      [9, 4, 3]
-    ],
-    [
-      [4, 14, 31],
-      [9, 10, 18, 12, 20],
-      [1, 4, 90]
-    ],
-    [
-      [2, 5, 10],
-      [3, 4, 5],
-      [2, 4, 5, 10]
-    ]
-  ])); // 316
-  
-  console.log(deepSum([
-    [
-      [20, 10],
-      [15],
-      [1, 1]
-    ],
-    [
-      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      [2],
-      [9, 11]
-    ],
-    [
-      [3, 5, 1],
-      [1, 5, 3],
-      [1]
-    ],
-    [
-      [2]
-    ]
-  ])); // 156
-  
-  console.log(deepSum([])); // No number
+
+  let sum = 0;
+
+  // Iterasi melalui level 1 (array of array)
+  for (let i = 0; i < arr.length; i++) {
+    let level1 = arr[i];
+
+    // Iterasi melalui level 2 (array)
+    for (let j = 0; j < level1.length; j++) {
+      let level2 = level1[j];
+
+      // Iterasi melalui level 3 (angka)
+      for (let k = 0; k < level2.length; k++) {
+        sum += level2[k];
+      }
+    }
+  }
+
+  return sum;
+}
+
+// TEST CASE
+console.log(deepSum([
+  [
+    [4, 5, 6],
+    [9, 1, 2, 10],
+    [9, 4, 3]
+  ],
+  [
+    [4, 14, 31],
+    [9, 10, 18, 12, 20],
+    [1, 4, 90]
+  ],
+  [
+    [2, 5, 10],
+    [3, 4, 5],
+    [2, 4, 5, 10]
+  ]
+])); // 316
+
+console.log(deepSum([
+  [
+    [20, 10],
+    [15],
+    [1, 1]
+  ],
+  [
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    [2],
+    [9, 11]
+  ],
+  [
+    [3, 5, 1],
+    [1, 5, 3],
+    [1]
+  ],
+  [
+    [2]
+  ]
+])); // 156
+
+console.log(deepSum([])); // No number
