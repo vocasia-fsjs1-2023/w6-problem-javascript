@@ -1,5 +1,21 @@
 function highestScore (students) {
     // Code disini
+    let highestScores = {};
+  
+    for (let i = 0; i < students.length; i++) {
+      let currentObj = students[i];
+      let className = currentObj.class;
+      let currentScore = currentObj.score;
+  
+      if (!highestScores[className] || currentScore > highestScores[className].score) {
+        highestScores[className] = {
+          name: currentObj.name,
+          score: currentScore
+        };
+      }
+    }
+  
+    return highestScores;
   }
   
   // TEST CASE
