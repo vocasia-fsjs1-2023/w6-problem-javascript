@@ -14,10 +14,9 @@ Untuk membuat sebuah object literal bisa dengan cara menuliskan kurung kurawal (
 
 ```javascript
 var myObj = {
-  myKey: 'myValue'
+  myKey: "myValue",
 };
 ```
-
 
 Value dalam object literal selain string bisa juga dengan memasukkan value array bahkan value object literal lainnya.
 
@@ -32,13 +31,13 @@ var supermanObj = {
     "coding",
     "reading",
     {
-      sports: ["parkour", "hill climbing"]
-    }
+      sports: ["parkour", "hill climbing"],
+    },
   ],
   address: {
     street: "Planet Krypton",
-    zipCode: 54213
-  }
+    zipCode: 54213,
+  },
 };
 
 console.log(supermanObj.name); // "Superman"
@@ -116,8 +115,6 @@ contoh lain:
   "address":{}
 }
 ```
-
-
 
 ### References
 
