@@ -1,6 +1,21 @@
 function graduates (students) {
     // Code disini
+    let result = {};
+
+  for (let i = 0; i < students.length; i++) {
+    let student = students[i];
+    let { name, score, class: className } = student;
+
+    if (score > 75) {
+      if (!result[className]) {
+        result[className] = [];
+      }
+
+      result[className].push({ name, score });
+    }
   }
+  return result;
+}
   
   console.log(graduates([
     {
