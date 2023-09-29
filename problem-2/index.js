@@ -1,6 +1,19 @@
 function ladder(word) {
-//your code here
+  const result = [];
+  
+  for (let i = 0; i < word.length; i++) {
+    const box = [];
+    for (let j = 0; j < word.length - i; j++) {
+      box.push(word[j]);
+    }
+    result.push(box);
+  }
+  
+  return result;
 }
+      
+      // Driver Code
+
   
 console.log(ladder('vocasia'));
 //   [
