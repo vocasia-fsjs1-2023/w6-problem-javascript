@@ -1,5 +1,12 @@
 function cariMedian(arr) {
     // code disini
+    if (arr.length % 2 === 0) {
+      const nilaiTengah = (arr.length / 2)- 1;
+      return (arr[nilaiTengah] + arr[nilaiTengah + 1])/ 2
+    }else {
+      const nilaiTengah = (arr.length / 2)- 0.5;
+      return arr[nilaiTengah];
+    }
   }
   
   // TEST CASES
