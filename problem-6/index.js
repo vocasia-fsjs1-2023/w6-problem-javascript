@@ -1,5 +1,22 @@
 function deepSum (arr) {
     // Code disini
+    if (arr.length === 0) {
+      return 'No number';
+    }
+  
+    var sum = 0;
+  
+    for (var i = 0; i < arr.length; i++) {
+      var level1 = arr[i];
+      for (var j = 0; j < level1.length; j++) {
+        var level2 = level1[j];
+        for (var k = 0; k < level2.length; k++) {
+          sum += level2[k];
+        }
+      }
+    }
+  
+    return sum;
   }
   
   //TEST CASE

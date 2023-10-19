@@ -1,5 +1,22 @@
 function changeMe(arr) {
     // Tulis codemu disini dan console log hasilnya
+    var currentYear = new Date().getFullYear();
+  
+  for (var i = 0; i < arr.length; i++) {
+    var personData = {
+      firstName: arr[i][0],
+      lastName: arr[i][1],
+      gender: arr[i][2],
+      age: 'Invalid Birth Year'
+    };
+    
+    if (arr[i][3] !== undefined && arr[i][3] <= currentYear) {
+      personData.age = currentYear - arr[i][3];
+    }
+    
+    console.log((i + 1) + '. ' + personData.firstName + ' ' + personData.lastName + ':');
+    console.log(personData);
+  }
 }
   
   // TEST CASES

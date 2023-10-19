@@ -1,5 +1,14 @@
 function cariMedian(arr) {
     // code disini
+    var middleIndex = Math.floor(arr.length / 2);
+
+  if (arr.length % 2 === 1) {
+    return arr[middleIndex];
+  } else {
+    var middleValue1 = arr[middleIndex - 1];
+    var middleValue2 = arr[middleIndex];
+    return (middleValue1 + middleValue2) / 2;
+  }
   }
   
   // TEST CASES
